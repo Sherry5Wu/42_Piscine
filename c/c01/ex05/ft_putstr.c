@@ -11,6 +11,10 @@
 /* ************************************************************************** */
 #include <unistd.h>
 
+/*
+ Create a function that displays a string of characters on the standard output.
+ */
+// This is the first way to do it.
 void	ft_putstr(char *str)
 {
 	int	i;
@@ -21,4 +25,25 @@ void	ft_putstr(char *str)
 		write(1, &str[i], 1);
 		i++;
 	}
+}
+
+// This is the second way to do it.
+void    ft_putstr(char *str)
+{
+    int    len;
+
+    i = 0;
+    while (str[len])
+        len++;
+    write(1, &str, len);
+}
+
+// This is the third way to do it.
+void    ft_putstr(char *str)
+{
+    while (*str)
+    {
+        write(1, str, 1);
+        str++
+    }
 }
