@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jingwu <jingwu@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 08:37:27 by jingwu            #+#    #+#             */
-/*   Updated: 2024/02/28 08:38:52 by jingwu           ###   ########.fr       */
+/*   Created: 2024/02/22 15:26:42 by jingwu            #+#    #+#             */
+/*   Updated: 2024/02/22 15:39:13 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_is_prime(int nb)
+int	ft_strlen(char *str)
 {
-	int	i;
+	int	len;
 
-	if (nb < 2)
-		return (0);
-	i = 2;
-	while (i * i <= nb && i <= 46340)
-	{
-		if (nb % i == 0)
-			return (0);
-		i++;
-	}
-	return (1);
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	return (len);
 }

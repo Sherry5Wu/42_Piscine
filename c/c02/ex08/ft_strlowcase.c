@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jingwu <jingwu@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 08:37:27 by jingwu            #+#    #+#             */
-/*   Updated: 2024/02/28 08:38:52 by jingwu           ###   ########.fr       */
+/*   Created: 2024/02/20 18:04:20 by jingwu            #+#    #+#             */
+/*   Updated: 2024/02/20 18:11:42 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_is_prime(int nb)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
-	if (nb < 2)
-		return (0);
-	i = 2;
-	while (i * i <= nb && i <= 46340)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (nb % i == 0)
-			return (0);
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] = str[i] + 32;
 		i++;
 	}
-	return (1);
+	return (str);
 }

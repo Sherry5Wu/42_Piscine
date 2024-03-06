@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   main_c02_ex08.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jingwu <jingwu@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 08:37:27 by jingwu            #+#    #+#             */
-/*   Updated: 2024/02/28 08:38:52 by jingwu           ###   ########.fr       */
+/*   Created: 2024/02/20 18:05:21 by jingwu            #+#    #+#             */
+/*   Updated: 2024/02/20 18:06:58 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_is_prime(int nb)
-{
-	int	i;
+#include <stdio.h>
 
-	if (nb < 2)
-		return (0);
-	i = 2;
-	while (i * i <= nb && i <= 46340)
-	{
-		if (nb % i == 0)
-			return (0);
-		i++;
-	}
-	return (1);
+char *ft_strlowcase(char *str);
+
+int main(void)
+{
+    char    str1[] = "NIHAO";
+    char    str2[] = "HEl2lo";
+    char    str3[] = "world";
+
+    printf("%s\n", ft_strlowcase(str1));
+    printf("%s\n", ft_strlowcase(str2));
+    printf("%s\n", ft_strlowcase(str3));
 }
+

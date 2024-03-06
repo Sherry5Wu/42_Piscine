@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   main_c02_09.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jingwu <jingwu@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 08:37:27 by jingwu            #+#    #+#             */
-/*   Updated: 2024/02/28 08:38:52 by jingwu           ###   ########.fr       */
+/*   Created: 2024/02/20 19:01:09 by jingwu            #+#    #+#             */
+/*   Updated: 2024/02/20 19:01:17 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_is_prime(int nb)
-{
-	int	i;
+#include <stdio.h>
 
-	if (nb < 2)
-		return (0);
-	i = 2;
-	while (i * i <= nb && i <= 46340)
-	{
-		if (nb % i == 0)
-			return (0);
-		i++;
-	}
-	return (1);
+char    *ft_strcapitalize(char *str);
+
+int main(void)
+{
+    char    str1[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+    char    str2[] = "Hello, i have a good day!";
+    char    str3[] = "good day";
+
+    printf("%s\n", ft_strcapitalize(str1));
+    printf("%s\n", ft_strcapitalize(str2));
+    printf("%s\n", ft_strcapitalize(str3));
 }
