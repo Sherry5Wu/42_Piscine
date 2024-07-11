@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
-#include <unistd.h>
 
 int is_char_a_sep(char c, char *str) {
     while (*str) {
@@ -76,23 +75,23 @@ char **ft_split(char *str, char *charset) {
     return res_str;
 }
 
-void ft_putstr(char *str) {
-    int i = 0;
-    while (str[i] != '\0') {
-        write(1, &str[i], 1);
-        i++;
-    }
-}
+// void ft_putstr(char *str) {
+//     int i = 0;
+//     while (str[i] != '\0') {
+//         write(1, &str[i], 1);
+//         i++;
+//     }
+// }
 
-int main() {
-    char *str = "hello~";
-    char *charset = "";
-    char **result = ft_split(str, charset);
-    int i = 0;
-    while (result[i] != 0) {
-        ft_putstr(result[i]);
-        write(1, "\n", 1);
-        i++;
-    }
-    return 0;
-}
+// int main() {
+//     char *str = "hello~";
+//     char *charset = "";
+//     char **result = ft_split(str, charset);
+//     int i = 0;
+//     while (result[i] != 0) {
+//         ft_putstr(result[i]);
+//         write(1, "\n", 1);
+//         i++;
+//     }
+//     return 0;
+// }
